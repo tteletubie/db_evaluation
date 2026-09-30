@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JA Electric</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.querySelector("nav");
+            const toggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("dropdown");
+
+            toggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                menu.classList.toggle("active");
+            });
+
+            document.addEventListener("click", () => {
+                menu.classList.remove("active");
+            });
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add("scrolled");
+                } else {
+                    nav.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <section class="false-body">
+        <nav>
+            <div class="nav-left"></div>
+
+            <div class="logo">
+            </div>
+
+            <div class="nav-right">
+                <div class="language-switch">
+                    <a href="es/index.html"><button id="lang-toggle">ES</button></a>
+                </div>
+
+                <div class="menu-container">
+                    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="dropdown-menu" id="dropdown">
+                        <a href="#intro">Introduction</a>
+                        <a href="#types">Types</a>
+                        <a href="#learning">Learning</a>
+                        <a href="#footer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <main class="banner">
+        <div class="banner-content">
+            <h1>WHAT DID I LEARN?</h1>
+            <p>A small web page to explain what did I learn this first unit about database concepts.</p>
+        </div>
+        <ul class="banner-list">
+            <a href="#intro" style="text-decoration:none;"><li>INTRO</li></a>
+            <a href="#types" style="text-decoration:none;"><li>TYPES</li></a>
+            <a href="#learning" style="text-decoration:none !important;"><li>LEARNING</li></a>
+        </ul>
+    </main>
+
+    <hr class="hr-long-right">
+    <hr class="hr-medium-right">
+    <hr class="hr-short-right">
+
+    <section class="join-team">
+        <h2>FUNDAMENTS OF DATABASES</h2>
+        <hr class="hr-titles">
+        <img src="images/data1.jpg" alt="Join Our Team" width="100%">
+    </section>
+
+    <section class="information" id="intro">
+        <p><strong>Databases helps us organize and manage information effectively.</strong></p>
+        <p>They provide a structured way to store, manage, and retrieve data, making it easier to analyze and use for decision-making.</p>
+        <p><strong>Why Choose Databases?</strong> They are essential for any modern business or organization that deals with large amounts of data.</p>
+        <p><strong>Types of Databases:</strong></p>
+        <ul>
+            <li>Relational Databases</li>
+            <li>Non-Relational Databases</li>
+        </ul>
+        <a href="https://rivery.io/data-learning-center/database-types-guide/"><button>MORE INFO</button></a>
+    </section>
+
+    <hr class="hr-long">
+    <hr class="hr-medium">
+    <hr class="hr-short-left">
+
+    <section class="offerings">
+        <div class="offerings-content">
+            <div class="text" id="types">
+                <h2>WHEN TO USE EACH TYPE?</h2>
+                <hr class="hr-titles">
+                <p>When choosing a database type, consider the nature of your data and the requirements of your application. A relational database is best for structured data with a fixed schema, while a non-relational database is better for unstructured or semi-structured data.</p>
+                <p><strong>Relational Databases:</strong></p>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>Oracle Database</li>
+                    <li>MariaDB</li>
+                    <li>SQLite</li>
+                </ul>
+                <p><strong>Non-Relational Databases:</strong></p>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>Cassandra</li>
+                    <li>Redis</li>
+                    <li>Neo4j</li>
+                </ul>
+                <a href="https://aws.amazon.com/compare/the-difference-between-relational-and-non-relational-databases/"><button>MORE INFO</button></a>
+            </div>
+            <div class="image">
+                <img src="images/data2.png" alt="Awards">
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section class="questions" id="learning">
+        <hr class="hr-long">
+        <hr class="hr-medium">
+        <hr class="hr-short-left">
+
+        <div class="questions-bg">
+            <div class="questions-container">
+                <h2>WHAT DO I WANT TO LEARN</h2>
+                <hr class="hr-titles">
+                
+                <details>
+                    <summary>Data Structuring</summary>
+                    <div class="faq-content">
+                        <p>To learn how to organize and manage data effectively.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Good practices</summary>
+                    <div class="faq-content">
+                        <p>The correct and established way to work with data in a database.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What not to do</summary>
+                    <div class="faq-content">
+                        <p>Things to avoid when working with databases.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <hr class="hr-long">
+    <hr class="hr-medium">
+    <hr class="hr-short-left">
+
+    <footer>
+        <div class="footer-container" id="footer">
+            <div class="footer-info">
+                <h2>ABOUT THIS PAGE</h2>
+                <p>A small web page to explain what did I learn this first unit about database concepts.</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lesly Rodriguez. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
