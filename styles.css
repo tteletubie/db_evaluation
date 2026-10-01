@@ -119,7 +119,7 @@ nav.scrolled #lang-toggle {
     position: absolute;
     top: 120%;
     right: 0;
-    background: #2e0303;
+    background: #061F3D;
     border-radius: 10px;
     padding: 0.5rem 0;
     display: flex;
@@ -242,7 +242,7 @@ nav.scrolled .hamburger span {
     padding: 1rem 0.5rem;
     margin: 0;
     z-index: 1;
-    background-color: #405A73;
+    background-color: #062F5C;
     flex-wrap: wrap;
 }
 
@@ -581,7 +581,7 @@ footer {
     color: #e3e3e3;             
     font-size: 1.5rem;
     transition: color 0.3s ease;
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 .footer-social a:hover {
